@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-family-inter: var(--font-inter);
+  --font-family-playfair: var(--font-playfair);
+
+  --color-neutral-100: #faf9f7;
+  --color-neutral-200: #f6f6f6;
+  --color-neutral-400: #cccccc;
+  --color-neutral-600: #4a4a4a;
+  --color-neutral-800: #252525;
+  --color-neutral-900: #1a1a1a;
+
+  --color-shade-white: #ffffff;
+  --color-shade-black: #000000;
+
+  --color-primary-400: #8b5a3c;
+  --color-secondary-400: #e1e1e1;
+}
+
+@layer base {
+  :root {
+    --font-inter: var(--font-family-inter);
+    --font-playfair: var(--font-family-playfair);
+  }
+}
+
