@@ -2,6 +2,7 @@ import Hero from '@/sections/Hero';
 import Bento from '@/sections/Bento';
 import Features  from '@/sections/Features';
 import Cta from '@/sections/Cta';
+import Footer from '@/sections/Footer';
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Bento/>
       <Features/>
       <Cta formUrl="https://docs.google.com/forms/d/e/YOUR_ACTUAL_FORM_ID/viewform" />
+      <Footer />
     </main>
   );
 }
