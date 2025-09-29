@@ -1,5 +1,6 @@
 import Hero from '@/sections/Hero';
 import Bento from '@/sections/Bento';
+import Features  from '@/sections/Features';
 
 export default function HomePage() {
   return (
@@ -9,6 +10,7 @@ export default function HomePage() {
         posterImage="/hero-poster.jpg" 
       />
       <Bento/>
+      <Features/>
       {/* Other sections will go here */}
     </main>
   );
