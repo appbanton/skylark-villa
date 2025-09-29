@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 interface BentoImage {
@@ -69,35 +70,56 @@ interface BentoGridProps {
 }
 
 const BentoGrid = ({ images, onImageClick }: BentoGridProps) => {
+  const [loadedImages, setLoadedImages] = React.useState<Set<number>>(new Set());
+
+  const handleImageLoad = (imageId: number) => {
+    setLoadedImages((prev) => new Set(prev).add(imageId));
+  };
+
   return (
     <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-6 md:grid-rows-[300px_300px_200px]">
-      {images.map((image) => (
-        <div
-          key={image.id}
-          className={`relative overflow-hidden rounded-xl cursor-pointer group border border-neutral-300 ${image.className}`}
-          style={{
-            boxShadow: '0px 2px 4px -2px rgba(16, 24, 40, 0.06), 0px 4px 8px -2px rgba(16, 24, 40, 0.10)'
-          }}
-          onClick={() => onImageClick(image.src, image.alt)}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              onImageClick(image.src, image.alt);
-            }
-          }}
-        >
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="(max-width: 768px) 50vw, 33vw"
-          />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-        </div>
-      ))}
+      {images.map((image, index) => {
+        const isLoaded = loadedImages.has(image.id);
+        const isPriority = index < 2; // First row images load with priority
+        
+        return (
+          <div
+            key={image.id}
+            className={`relative overflow-hidden rounded-xl cursor-pointer group border border-neutral-300 ${image.className}`}
+            style={{
+              boxShadow: '0px 2px 4px -2px rgba(16, 24, 40, 0.06), 0px 4px 8px -2px rgba(16, 24, 40, 0.10)',
+              backgroundColor: '#f3f4f6'
+            }}
+            onClick={() => onImageClick(image.src, image.alt)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                onImageClick(image.src, image.alt);
+              }
+            }}
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className={`object-cover transition-all duration-500 group-hover:scale-105 ${
+                isLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
+              sizes="(max-width: 768px) 50vw, 33vw"
+              priority={isPriority}
+              loading={isPriority ? undefined : 'lazy'}
+              onLoad={() => handleImageLoad(image.id)}
+            />
+            {/* Loading shimmer effect */}
+            {!isLoaded && (
+              <div className="absolute inset-0 bg-gradient-to-r from-neutral-200 via-neutral-100 to-neutral-200 animate-pulse" />
+            )}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+          </div>
+        );
+      })}
     </div>
   );
 };
@@ -160,14 +182,15 @@ const Bento = () => {
 
   return (
     <section 
+    id="bento"
       className="py-16 md:py-24 px-6 md:px-12 bg-neutral-100"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header Content */}
         <div className="text-center mb-12 md:mb-16">
-<h2 className="mb-6 text-3xl md:text-4xl lg:text-5xl">
-  A Sanctuary of Modern Luxury
-</h2>
+          <h2 className="mb-6">
+            A Sanctuary of Modern Luxury
+          </h2>
           <p className="p-normal text-neutral-600 max-w-2xl mx-auto">
             Expansive glass openings and limestone surfaces create seamless 
             indoor-outdoor living, while the infinity pool anchors this peaceful retreat.

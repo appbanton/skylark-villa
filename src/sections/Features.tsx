@@ -54,7 +54,7 @@ const Features = ({
   features = defaultFeatures,
 }: FeaturesProps) => {
   return (
-    <section className="py-16 md:py-24 px-6 md:px-12 bg-shade-white">
+    <section id="features" className="py-16 md:py-24 px-6 md:px-12 bg-shade-white">
       <div className="max-w-7xl mx-auto">
         {/* Header Content */}
         <div className="text-center mb-12 md:mb-16">

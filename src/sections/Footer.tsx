@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -10,24 +12,39 @@ interface FooterLink {
 interface FooterProps {
   quickLinks?: FooterLink[];
   policyLinks?: FooterLink[];
-  contactEmail?: string;
+  instagramHandle?: string;
+  instagramUrl?: string;
   contactLocation?: string;
 }
 
 const Footer = ({
   quickLinks = [
-    { label: 'Villa Gallery', href: '#gallery', isExternal: false },
-    { label: 'Book Now', href: '#booking', isExternal: false },
+    { label: 'Discover Villa', href: '#bento', isExternal: false },
+    { label: 'Amenities', href: '#features', isExternal: false },
   ],
   policyLinks = [
-    { label: 'Cancellation Policy', href: '', isExternal: true },
-    { label: 'House Rules', href: '', isExternal: true },
-    { label: 'Privacy Policy', href: '', isExternal: true },
-    { label: 'Terms of Service', href: '', isExternal: true },
+    { label: 'Privacy Policy', href: 'https://appbanton.notion.site/Privacy-Policy-27df053c965b80c09c75fc8af047ae57', isExternal: true },
+    { label: 'Terms of Service', href: 'https://appbanton.notion.site/Terms-of-Service-27df053c965b80ddbd29d4df4f377b6f', isExternal: true },
   ],
-  contactEmail = 'info@skylarkvilla.com',
+  instagramHandle = '@skylarkvilla868',
+  instagramUrl = 'https://instagram.com/skylarkvilla868',
   contactLocation = 'Blanchisseuse, Trinidad',
 }: FooterProps) => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handleQuickLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const sectionId = href.substring(1);
+      scrollToSection(sectionId);
+    }
+  };
+
   return (
     <footer className="bg-neutral-900 text-white">
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-12 md:px-12 md:pt-20 md:pb-16 lg:pt-24">
@@ -52,6 +69,7 @@ const Footer = ({
                   <li key={index}>
                     <Link
                       href={link.href}
+                      onClick={(e) => handleQuickLinkClick(e, link.href)}
                       className="text-sm text-neutral-400 transition-colors hover:text-white font-family-inter"
                     >
                       {link.label}
@@ -96,10 +114,12 @@ const Footer = ({
               </h4>
               <div className="space-y-3">
                 <a
-                  href={`mailto:${contactEmail}`}
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block text-sm text-neutral-400 transition-colors hover:text-white font-family-inter"
                 >
-                  {contactEmail}
+                  {instagramHandle}
                 </a>
                 <p className="text-sm text-neutral-400 font-family-inter">
                   {contactLocation}

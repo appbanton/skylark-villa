@@ -13,7 +13,7 @@ const Cta: React.FC<CtaProps> = ({ formUrl }) => {
   };
 
   return (
-    <section className="py-16 md:py-24 px-6 md:px-12 bg-neutral-800">
+    <section id="cta" className="py-16 md:py-24 px-6 md:px-12 bg-neutral-800">
       <div className="max-w-4xl mx-auto text-center">
         {/* Heading */}
         <h2 className="mb-6 text-3xl md:text-4xl lg:text-5xl text-shade-white">

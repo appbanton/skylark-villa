@@ -8,10 +8,10 @@ interface HeroProps {
   posterImage?: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ 
+function Hero({ 
   videoSrc = '/hero-video.mp4', 
   posterImage = '/hero-poster.jpg' 
-}) => {
+}: HeroProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -41,6 +41,14 @@ const Hero: React.FC<HeroProps> = ({
       };
     }
   }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
       {/* Header */}
@@ -48,7 +56,12 @@ const Hero: React.FC<HeroProps> = ({
         <div className="text-2xl font-bold text-white md:text-3xl font-family-playfair">
           SKYLARK
         </div>
-        <Button variant="ghost" size="md" className="border border-white/30">
+        <Button 
+          variant="ghost" 
+          size="md" 
+          className="border border-white/30"
+          onClick={() => scrollToSection('cta')}
+        >
           Book Now
         </Button>
       </header>
@@ -100,6 +113,7 @@ const Hero: React.FC<HeroProps> = ({
               variant="primary" 
               size="lg"
               className="min-w-[160px]"
+              onClick={() => scrollToSection('bento')}
             >
               Discover Villa
             </Button>
@@ -107,6 +121,7 @@ const Hero: React.FC<HeroProps> = ({
               variant="secondary" 
               size="lg"
               className="min-w-[160px]"
+              onClick={() => window.open('YOUR_EXTERNAL_FORM_URL', '_blank')}
             >
               Check Availability
             </Button>
@@ -124,6 +139,6 @@ const Hero: React.FC<HeroProps> = ({
       </div>
     </div>
   );
-};
+}
 
 export default Hero;
