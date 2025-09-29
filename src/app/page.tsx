@@ -1,4 +1,5 @@
 import Hero from '@/sections/Hero';
+import Bento from '@/sections/Bento';
 
 export default function HomePage() {
   return (
@@ -7,6 +8,7 @@ export default function HomePage() {
         videoSrc="/hero-video.mp4" 
         posterImage="/hero-poster.jpg" 
       />
+      <Bento/>
       {/* Other sections will go here */}
     </main>
   );

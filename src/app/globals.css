@@ -6,6 +6,7 @@
 
   --color-neutral-100: #faf9f7;
   --color-neutral-200: #f6f6f6;
+  --color-neutral-300: #e4e7ec;
   --color-neutral-400: #cccccc;
   --color-neutral-600: #4a4a4a;
   --color-neutral-800: #252525;
@@ -23,5 +24,46 @@
     --font-inter: var(--font-family-inter);
     --font-playfair: var(--font-family-playfair);
   }
-}
 
+  /* Typography System */
+  h1 {
+    font-family: var(--font-playfair);
+    font-size: clamp(36px, 6vw, 64px);
+    letter-spacing: -0.3px;
+    line-height: 110%;
+    color: var(--color-neutral-900);
+  }
+
+  h2 {
+    font-family: var(--font-playfair);
+    font-size: clamp(32px, 5vw, 48px);
+    letter-spacing: -0.1px;
+    line-height: 120%;
+    color: var(--color-neutral-900);
+    font-weight: 600;
+  }
+
+  p {
+    font-family: var(--font-inter);
+    font-size: clamp(18px, 2vw, 22px);
+    letter-spacing: 0.1px;
+    line-height: 170%;
+  }
+
+  /* P variants */
+  .p-medium {
+    font-weight: 500;
+  }
+
+  .p-normal {
+    font-weight: 400;
+  }
+
+  .text-neutral-600 {
+    color: var(--color-neutral-600);
+  }
+
+  .text-neutral-900 {
+    color: var(--color-neutral-900);
+  }
+}
