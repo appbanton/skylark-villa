@@ -35,7 +35,7 @@ const defaultFeatures: Feature[] = [
   {
     id: 3,
     title: 'Isolation',
-    description: 'Nestled along Trinidad\'s north coast two hours from the city lies a world tourists and locals rarely frequent',
+    description: 'Nestled along Trinidads north coast two hours from the city lies a world tourists and locals rarely frequent',
     imageSrc: '/placeholder-villa-3.jpg',
     imageAlt: 'Interior living space with floor-to-ceiling windows overlooking nature',
   },
