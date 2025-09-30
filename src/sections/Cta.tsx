@@ -19,8 +19,8 @@ export default function Cta() {
         
         {/* Description */}
         <p className="p-normal text-neutral-400 mb-8 md:mb-10 max-w-2xl mx-auto">
-          Skylark Villa accepts a limited number of bookings each season. <br className="hidden md:block" />
-          Submit your preferred dates and we&apos;ll confirm availability <br className="hidden md:block" />
+          Skylark Villa accepts a limited number of bookings each season. <br className="hidden sm:block" />
+          Submit your preferred dates and we&apos;ll confirm availability <br className="hidden sm:block" />
           within 1 - 2 business days
         </p>
         
