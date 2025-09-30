@@ -105,7 +105,7 @@ function Hero({
           
           <p className="mb-12 text-lg text-neutral-400 md:text-xl lg:text-2xl font-family-inter leading-[1.7]">
             Sleep to knocking bamboo. Wake to crashing waves. Exist exactly <br className="hidden md:block" />
-            as you are on Trinidad's untouched northern coast
+            as you are on Trinidads untouched northern coast
           </p>
           
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
