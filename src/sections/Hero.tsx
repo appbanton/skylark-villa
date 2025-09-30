@@ -10,7 +10,7 @@ interface HeroProps {
 
 function Hero({ 
   videoSrc = '/hero-video.mp4', 
-  posterImage = '/hero-poster.jpg' 
+  posterImage = '/hero-poster.png' 
 }: HeroProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -62,7 +62,7 @@ function Hero({
           className="border border-white/30"
           onClick={() => scrollToSection('cta')}
         >
-          Book Now
+          Stay With Us
         </Button>
       </header>
 
@@ -100,12 +100,12 @@ function Hero({
       <div className="relative z-10 flex min-h-[calc(100vh-120px)] items-center justify-center px-6 text-center">
         <div className="max-w-4xl">
           <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl font-family-playfair">
-            Explore your place to stay
+            Your private coastal retreat
           </h1>
           
           <p className="mb-12 text-lg text-neutral-400 md:text-xl lg:text-2xl font-family-inter leading-[1.7]">
-            Where contemporary architecture embraces the pristine rainforest.<br className="hidden md:block" />
-            Experience luxury in perfect harmony with nature.
+            Sleep to knocking bamboo. Wake to crashing waves. Exist exactly <br className="hidden md:block" />
+            as you are on Trinidad's untouched northern coast
           </p>
           
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -121,7 +121,7 @@ function Hero({
               variant="secondary" 
               size="lg"
               className="min-w-[160px]"
-              onClick={() => window.open('YOUR_EXTERNAL_FORM_URL', '_blank')}
+              onClick={() => window.open('https://forms.gle/uR7b5ZSPfUnZtHeA6', '_blank')}
             >
               Check Availability
             </Button>

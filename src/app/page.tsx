@@ -13,7 +13,7 @@ export default function HomePage() {
       />
       <Bento/>
       <Features/>
-      <Cta formUrl="https://docs.google.com/forms/d/e/YOUR_ACTUAL_FORM_ID/viewform" />
+      <Cta />
       <Footer />
     </main>
   );

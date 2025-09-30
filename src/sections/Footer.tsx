@@ -21,6 +21,7 @@ const Footer = ({
   quickLinks = [
     { label: 'Discover Villa', href: '#bento', isExternal: false },
     { label: 'Amenities', href: '#features', isExternal: false },
+
   ],
   policyLinks = [
     { label: 'Privacy Policy', href: 'https://appbanton.notion.site/Privacy-Policy-27df053c965b80c09c75fc8af047ae57', isExternal: true },
@@ -54,8 +55,7 @@ const Footer = ({
               SKYLARK VILLA
             </h3>
             <p className="text-sm leading-relaxed text-neutral-400 font-family-inter">
-              Where contemporary architecture embraces the pristine rainforest.
-              Experience luxury in perfect harmony with nature.
+              Time moves different here
             </p>
           </div>
 

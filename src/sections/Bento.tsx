@@ -111,6 +111,7 @@ const BentoGrid = ({ images, onImageClick }: BentoGridProps) => {
               priority={isPriority}
               loading={isPriority ? undefined : 'lazy'}
               onLoad={() => handleImageLoad(image.id)}
+              quality={85}
             />
             {/* Loading shimmer effect */}
             {!isLoaded && (
@@ -189,11 +190,11 @@ const Bento = () => {
         {/* Header Content */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="mb-6">
-            A Sanctuary of Modern Luxury
+            The Villa
           </h2>
           <p className="p-normal text-neutral-600 max-w-2xl mx-auto">
-            Expansive glass openings and limestone surfaces create seamless 
-            indoor-outdoor living, while the infinity pool anchors this peaceful retreat.
+            Watch dawn paint shadows across 10-foot walls. 
+            The rainforest breathes just beyond the glass.
           </p>
         </div>
 

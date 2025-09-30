@@ -1,13 +1,10 @@
 'use client';
 
-import React from 'react';
 import Button from '@/components/Button';
 
-interface CtaProps {
-  formUrl: string;
-}
-
-const Cta: React.FC<CtaProps> = ({ formUrl }) => {
+export default function Cta() {
+  const formUrl = 'https://forms.gle/uR7b5ZSPfUnZtHeA6';
+  
   const handleCheckAvailability = () => {
     window.open(formUrl, '_blank', 'noopener,noreferrer');
   };
@@ -17,13 +14,14 @@ const Cta: React.FC<CtaProps> = ({ formUrl }) => {
       <div className="max-w-4xl mx-auto text-center">
         {/* Heading */}
         <h2 className="mb-6 text-3xl md:text-4xl lg:text-5xl text-shade-white">
-          Reserve Your Exclusive Retreat
+          Inquire About Your Stay
         </h2>
         
         {/* Description */}
         <p className="p-normal text-neutral-400 mb-8 md:mb-10 max-w-2xl mx-auto">
-          To start the process please click the button below and fill out the 
-          form for pricing information and booking dates
+          Skylark Villa accepts a limited number of bookings each season. <br className="hidden md:block" />
+          Submit your preferred dates and we'll confirm availability <br className="hidden md:block" />
+          within 1 - 2 business days
         </p>
         
         {/* CTA Button */}
@@ -38,6 +36,4 @@ const Cta: React.FC<CtaProps> = ({ formUrl }) => {
       </div>
     </section>
   );
-};
-
-export default Cta;
+}

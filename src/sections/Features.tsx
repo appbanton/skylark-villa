@@ -20,37 +20,37 @@ interface FeaturesProps {
 const defaultFeatures: Feature[] = [
   {
     id: 1,
-    title: 'Contemporary Architecture',
-    description: 'Award-winning design featuring clean lines, premium materials, and seamless integration with the natural landscape.',
+    title: 'Scale',
+    description: 'Ten-foot walls rise to meet eight-foot doors. The villa is designed to make the space feel infinite',
     imageSrc: '/placeholder-villa-1.jpg',
     imageAlt: 'Modern A-frame villa with geometric design surrounded by forest',
   },
   {
     id: 2,
-    title: 'Infinity Pool Sanctuary',
-    description: 'Green Bali stone infinity pool creates a stunning focal point, appearing to merge with the forest canopy beyond.',
+    title: 'Proximity',
+    description: 'The ocean is close enough to hear from your balcony. Far enough that you never see the crowds',
     imageSrc: '/placeholder-villa-2.jpg',
     imageAlt: 'Infinity pool with palm trees and tropical landscape',
   },
   {
     id: 3,
-    title: 'Panoramic Forest Views',
-    description: 'Floor-to-ceiling windows and 20-foot openings frame breathtaking rainforest vistas from every living space.',
+    title: 'Isolation',
+    description: 'Nestled along Trinidad\'s north coast two hours from the city lies a world tourists and locals rarely frequent',
     imageSrc: '/placeholder-villa-3.jpg',
     imageAlt: 'Interior living space with floor-to-ceiling windows overlooking nature',
   },
   {
     id: 4,
-    title: 'Sustainable Luxury',
-    description: 'Environmentally conscious design using local limestone and native materials that honor the pristine ecosystem.',
+    title: 'Material',
+    description: 'Floor-to-ceiling glass blurs the line between the inside space and nature. Experience the best of both worlds',
     imageSrc: '/placeholder-villa-4.jpg',
     imageAlt: 'Sustainable modern architecture with natural materials at dusk',
   },
 ];
 
 const Features = ({
-  heading = 'Luxury Redefined',
-  description = 'Every detail thoughtfully curated to create an extraordinary retreat experience.',
+  heading = 'Built For Skylarking',
+  description = 'Between jungle and ocean. Far from everything else. The only thing you have to do is nothing',
   features = defaultFeatures,
 }: FeaturesProps) => {
   return (
