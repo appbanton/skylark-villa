@@ -20,7 +20,7 @@ interface FooterProps {
 const Footer = ({
   quickLinks = [
     { label: 'Discover Villa', href: '#bento', isExternal: false },
-    { label: 'Amenities', href: '#features', isExternal: false },
+    { label: 'The 4 Pillars', href: '#features', isExternal: false },
 
   ],
   policyLinks = [

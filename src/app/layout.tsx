@@ -15,8 +15,8 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Skylark Villa - Luxury Accommodation',
-  description: 'Where contemporary architecture embraces the pristine rainforest. Experience luxury in perfect harmony with nature.',
+  title: 'Skylark Villa - Time Moves Different Here',
+  description: 'A private villa two hours from the city on Trinidad\'s northern coast where the only thing you have to do is nothing.',
 };
 
 export default function RootLayout({
