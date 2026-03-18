@@ -234,11 +234,6 @@ const defaultFeatures: Feature[] = [
 
 // ── Feature Card ─────────────────────────────────────────────
 
-interface FeatureCardProps {
-  feature: Feature;
-  isLightMode: boolean;
-}
-
 const FeatureCard = ({ feature }: { feature: Feature }) => {
   return (
     <div

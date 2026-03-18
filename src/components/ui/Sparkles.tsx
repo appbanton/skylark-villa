@@ -82,7 +82,7 @@ export const SparklesCore = (props: ParticlesProps) => {
               events: {
                 onClick: { enable: false, mode: "push" },
                 onHover: { enable: false, mode: "repulse" },
-                resize: true as any,
+                resize: { enable: true },
               },
             },
             particles: {
@@ -100,7 +100,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 value: particleDensity || 40,
               },
               opacity: {
-                value: { min: 0.1, max: 0.8 },
+                value: { min: 0.05, max: 0.3 },
                 animation: {
                   count: 0,
                   enable: true,
