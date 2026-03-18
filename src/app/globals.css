@@ -23,6 +23,54 @@
   :root {
     --font-inter: var(--font-family-inter);
     --font-playfair: var(--font-family-playfair);
+
+    /* Light mode surface tokens */
+    --color-bg-primary: #faf9f7;
+    --color-bg-secondary: #f6f6f6;
+    --color-bg-white: #ffffff;
+    --color-bg-dark: #252525;
+    --color-bg-darkest: #1a1a1a;
+    --color-feature-card: #f7f6f5;
+    --color-feature-watermark: #e8e6e3;
+    --color-cta-card: #f0eeec;
+    --color-cta-border: #e4e0db;
+    --color-cta-heading: #1d1c1c;
+    --color-cta-body: #1d1c1c;
+    --color-cta-particle: #a0785a;
+    --color-bg-footer: #f7f6f5;
+    --color-footer-title: #8b5a3c;
+
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #4a4a4a;
+    --color-text-muted: #cccccc;
+
+    --color-border: #e4e7ec;
+    --color-accent: #8b5a3c;
+  }
+
+  /* ── Dark mode overrides ───────────────────────── */
+  [data-theme="dark"] {
+    --color-bg-primary: #0c0a08;
+    --color-bg-secondary: #141210;
+    --color-bg-white: #0c0a08;
+    --color-bg-dark: #252220;
+    --color-bg-darkest: #0c0a08;
+    --color-feature-card: #1a1a1a;
+    --color-feature-watermark: #2e2e2e;
+    --color-cta-card: #1a1a1a;
+    --color-cta-border: #2a2725;
+    --color-cta-heading: #f2ede6;
+    --color-cta-body: #d4cfc8;
+    --color-cta-particle: #c9a96e;
+    --color-bg-footer: #1a1a1a;
+    --color-footer-title: #f2ede6;
+
+    --color-text-primary: #f2ede6;
+    --color-text-secondary: #d4cfc8;
+    --color-text-muted: #8a857f;
+
+    --color-border: #3a3733;
+    --color-accent: #c9a96e;
   }
 
   /* Typography System */
