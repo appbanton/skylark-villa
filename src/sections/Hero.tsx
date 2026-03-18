@@ -77,7 +77,7 @@ function Hero({
   };
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
+    <div className="relative min-h-[100dvh] w-full overflow-hidden">
       {/* Invisible overlay — closes menu on tap anywhere outside */}
       {menuOpen && (
         <div
@@ -210,7 +210,7 @@ function Hero({
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex min-h-[calc(100vh-120px)] items-center justify-center px-6 text-center">
+      <div className="relative z-10 flex min-h-[calc(100dvh-120px)] items-center justify-center px-6 text-center">
         <div className="max-w-4xl">
           <h1
             className="mb-6 text-4xl font-bold leading-tight md:text-6xl lg:text-7xl font-family-playfair"
