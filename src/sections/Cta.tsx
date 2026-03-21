@@ -7,6 +7,14 @@ export default function Cta() {
   const formUrl = "https://forms.gle/uR7b5ZSPfUnZtHeA6";
 
   const handleCheckAvailability = () => {
+    // Fire GA4 event
+    const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+    if (typeof window !== "undefined" && typeof w.gtag === "function") {
+      w.gtag("event", "cta_click", {
+        event_category: "engagement",
+        event_label: "check_availability",
+      });
+    }
     window.open(formUrl, "_blank", "noopener,noreferrer");
   };
 

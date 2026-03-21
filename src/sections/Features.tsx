@@ -21,6 +21,7 @@ interface FeaturesProps {
 
 const ScaleIcon = () => (
   <svg
+    style={{ display: "block" }}
     width="40"
     height="40"
     viewBox="0 0 40 40"
@@ -56,6 +57,7 @@ const ScaleIcon = () => (
 
 const ProximityIcon = () => (
   <svg
+    style={{ display: "block" }}
     width="40"
     height="40"
     viewBox="0 0 40 40"
@@ -103,6 +105,7 @@ const ProximityIcon = () => (
 
 const IsolationIcon = () => (
   <svg
+    style={{ display: "block" }}
     width="40"
     height="40"
     viewBox="0 0 40 40"
@@ -157,6 +160,7 @@ const IsolationIcon = () => (
 
 const MaterialIcon = () => (
   <svg
+    style={{ display: "block" }}
     width="40"
     height="40"
     viewBox="0 0 40 40"
@@ -267,10 +271,10 @@ const FeatureCard = ({ feature }: { feature: Feature }) => {
       </div>
 
       {/* Content — drives card height */}
-      <div className="relative z-10 p-6 md:p-8 flex flex-col gap-4">
+      <div className="relative z-10 p-6 md:p-8 flex flex-col items-start gap-4 w-full">
         <div>{feature.icon}</div>
         <p
-          className="font-family-inter"
+          className="font-family-inter w-full text-left"
           style={{
             fontSize: "12px",
             fontWeight: 400,
@@ -281,7 +285,7 @@ const FeatureCard = ({ feature }: { feature: Feature }) => {
           {feature.number}
         </p>
         <h3
-          className="font-family-inter"
+          className="font-family-inter w-full text-left"
           style={{
             fontSize: "20px",
             fontWeight: 600,
@@ -293,7 +297,7 @@ const FeatureCard = ({ feature }: { feature: Feature }) => {
           {feature.title}
         </h3>
         <p
-          className="font-family-inter pb-8"
+          className="font-family-inter pb-8 w-full text-left"
           style={{
             fontSize: "16px",
             fontWeight: 400,
