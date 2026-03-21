@@ -61,7 +61,7 @@ export default function Cta() {
               className="mb-8 md:mb-10 max-w-2xl mx-auto"
               style={{
                 color: "var(--color-cta-body)",
-                opacity: 0.7,
+                opacity: 0.6,
                 fontSize: "16px",
                 lineHeight: "170%",
                 fontFamily: "var(--font-inter)",

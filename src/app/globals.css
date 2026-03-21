@@ -114,4 +114,11 @@
   .text-neutral-900 {
     color: var(--color-neutral-900);
   }
+
+  /* Hide scroll indicator on short viewports */
+  @media (max-height: 600px) {
+    .scroll-indicator {
+      display: none !important;
+    }
+  }
 }

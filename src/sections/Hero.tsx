@@ -251,11 +251,11 @@ function Hero({
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2">
+      {/* Scroll Indicator — hidden on short viewports/landscape */}
+      <div className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2 scroll-indicator">
         <div className="animate-bounce">
           <div
-            className="h-8 w-5 rounded-full border-2 transition-colors duration-300"
+            className="h-8 w-5 rounded-full border-2"
             style={{ borderColor: "rgba(255,255,255,0.5)" }}
           >
             <div
